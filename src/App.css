@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-title {
+  font-size: 2rem;
+}
+
+h2{
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: center;
+}
+
+.loading{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.loading .fa-spin{
+  display: block;
+}
+
+.treemap{
+  font-family: '微軟正黑體', sans-serif !important;
+  height: 50vh;
+}
+
+.treemap text{
+  font-family: 'Noto Sans TC' !important;
+}
+
+.datasets{
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  letter-spacing: .1px;
+}
+
+.datasets li{
+  list-style: none;
+}
+
+footer{
+  font-size: .9rem;
+  color: 777;
+  text-align: center;
+}
