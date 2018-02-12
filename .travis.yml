@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "9"
+cache:
+  directories:
+    - "node_modules"
+after_success:
+  - git config --global user.name "NoobTW"
+  - git config --global user.email "noobtw@users.noreply.github.com"
+  - git remote rm origin
+  - git remote add origin https://NoobTW:${GH_TOKEN}@github.com/NoobTW/od-freq.git
+  - npm run deploy
