@@ -23,7 +23,6 @@ export function showBureau(payload) {
 
 		const datasets = payload.data.filter(x => x.name === payload.bureau);
 		if(datasets.length){
-			console.log(datasets);
 			dispatch(showBureauSuccess({
 				bureau: payload.bureau,
 				datasets: datasets,
