@@ -18,8 +18,9 @@ class List extends Component {
 			<h2>請選擇時間</h2>
 			<div className="datasets">
 				<ul>
-					<li><Link to={`${process.env.PUBLIC_URL}/treemap/2017/8`}><FontAwesomeIcon icon="folder" /> 2017-08</Link></li>
 					<li><Link to={`${process.env.PUBLIC_URL}/treemap/2017/3`}><FontAwesomeIcon icon="folder" /> 2017-03</Link></li>
+					<li><Link to={`${process.env.PUBLIC_URL}/treemap/2017/8`}><FontAwesomeIcon icon="folder" /> 2017-08</Link></li>
+					<li><Link to={`${process.env.PUBLIC_URL}/treemap/2018/1`}><FontAwesomeIcon icon="folder" /> 2018-01</Link></li>
 				</ul>
 			</div>
 		</div>)

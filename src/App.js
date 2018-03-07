@@ -98,6 +98,7 @@ class App extends Component {
 		if(this.props.failed){
 			return (<Redirect to={`${process.env.PUBLIC_URL}/`} />);
 		}
+		const handleClick = this.handleClick.bind(this);
 		return (
 			<div className="App">
 				<header className="App-header">
@@ -111,9 +112,11 @@ class App extends Component {
 					<h2>{this.props.filter.city ? this.props.filter.city + '政府資料集' : null}</h2>
 					<Treemap config={{
 						...this.props.data.treemap,
-						on:{
-							click: d => {
-								this.handleClick(d);
+						on: {
+							click: function(d, i) {
+								// this._tooltipClass.data([]).render();
+								console.log(this);
+								handleClick(d);
 							}
 						}
 					}} />
