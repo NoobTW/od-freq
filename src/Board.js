@@ -70,7 +70,7 @@ class Board extends Component {
 						{
 							this.props.data.map(d =>
 								<tr>
-									<td className="rank">{this.setState({i: i+1})}</td>
+									<td className="rank">{this.setState({i: this.state.i+1})}</td>
 									<td className="name">{d.name}</td>
 									<td className="count">{d.total}</td>
 									<td className="gv">{
