@@ -45,7 +45,10 @@ class Board extends Component {
 	}
 
 	render() {
-		this.state.i = 1;
+		this.setState({i: 1});
+		if(this.props.failed){
+			return (<Redirect to={`${process.env.PUBLIC_URL}/`} />);
+		}
 		return (
 			<div className="App">
 				<header className="App-header">

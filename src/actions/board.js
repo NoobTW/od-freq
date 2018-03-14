@@ -23,7 +23,7 @@ export function showBoard(payload){
 	return dispatch => {
 		return new Promise(async (resolve, reject) => {
 			dispatch(showBoardRequest());
-			// try{
+			try{
 				let data = await axios.get(`${process.env.PUBLIC_URL}/data/${payload.year}-${payload.month}-keyword.json`);
 				data = data.data;
 				Array.from(data).forEach(d => {
@@ -94,6 +94,8 @@ export function showBoard(payload){
 							case '澎湖縣政府':
 							case '澎湖縣':
 								gvName = '澎湖'; break;
+							default:
+								gvName = gvName;
 						}
 						sortable.push([gv, gvName, d.gv[gv]]);
 					});
@@ -105,10 +107,10 @@ export function showBoard(payload){
 						data,
 					}))
 				);
-			// }catch(err){
-			// 	dispatch(showBoardFailed())
-			// 	reject(err);
-			// }
+			}catch(err){
+				dispatch(showBoardFailed())
+				reject(err);
+			}
 		});
 	}
 }
