@@ -45,7 +45,6 @@ class Board extends Component {
 	}
 
 	render() {
-		this.setState({i: 1});
 		if(this.props.failed){
 			return (<Redirect to={`${process.env.PUBLIC_URL}/`} />);
 		}
@@ -66,11 +65,10 @@ class Board extends Component {
 							<th>次數</th>
 							<th>政府</th>
 						</tr>
-						{console.log(this.props.data)}
 						{
-							this.props.data.map(d =>
+							this.props.data.map((d, i) =>
 								<tr>
-									<td className="rank">{this.setState({i: this.state.i+1})}</td>
+									<td className="rank">{i+1}</td>
 									<td className="name">{d.name}</td>
 									<td className="count">{d.total}</td>
 									<td className="gv">{
