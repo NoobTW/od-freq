@@ -4,12 +4,12 @@ body{
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-.datasets ul{
+.list ul{
   margin: 0 auto;
   max-width: 500px;
 }
 
-.datasets li{
+.list li{
   display: inline-block;
   width: 49%;
   text-align: center;
