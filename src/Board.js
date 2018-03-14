@@ -57,7 +57,9 @@ class Board extends Component {
 					<FontAwesomeIcon icon="spinner" className="loading fa-5x fa-spin" />
 					<p>正在載入資料集......</p>
 				</div>) : null}
-				{this.props.data ? (<table className="board">
+				{this.props.data ? (
+					<div><h2>{this.state.year} 年 {this.state.month} 月資料集熱門關鍵字</h2>
+					<table className="board">
 					<tbody>
 						<tr>
 							<th>名次</th>
@@ -82,7 +84,11 @@ class Board extends Component {
 							)
 						}
 					</tbody>
-				</table>) : null}
+				</table>
+				</div>) : null}
+				<footer>
+					資料來源：各地方政府 | Build with <FontAwesomeIcon icon={['fab', 'react']} /> | <a href="https://github.com/NoobTW/od-freq">開放原始碼</a>.
+				</footer>
 			</div>
 		);
 	}
