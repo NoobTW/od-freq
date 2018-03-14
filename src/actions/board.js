@@ -95,7 +95,7 @@ export function showBoard(payload){
 							case '澎湖縣':
 								gvName = '澎湖'; break;
 							default:
-								gvName = gvName;
+								gvName = gv;
 						}
 						sortable.push([gv, gvName, d.gv[gv]]);
 					});
