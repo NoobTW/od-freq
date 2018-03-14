@@ -1,6 +1,7 @@
 import { showMonth } from './months';
 import { showCity } from './city';
 import { showBureau } from './bureau';
+import { showBoard } from './board';
 
 const showCityFromMonth = payload => {
 	return (dispatch, getState) => {
@@ -31,4 +32,4 @@ const showBureauFromMonth = payload => {
 	}
 }
 
-export { showMonth, showCity, showCityFromMonth, showBureau, showBureauFromMonth };
+export { showMonth, showCity, showCityFromMonth, showBureau, showBureauFromMonth, showBoard };

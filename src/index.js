@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 
 import App from './App';
 import List from './List';
+import Board from './Board';
 import dApp from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -26,6 +27,7 @@ ReactDOM.render((
 				<Route exact path={`${process.env.PUBLIC_URL}/treemap/:year/:month`} component={App} />
 				<Route exact path={`${process.env.PUBLIC_URL}/treemap/:year/:month/:city`} component={App} />
 				<Route exact path={`${process.env.PUBLIC_URL}/treemap/:year/:month/:city/:bureau`} component={App} />
+				<Route exact path={`${process.env.PUBLIC_URL}/board/:year/:month`} component={Board} />
 				</div>
 		</BrowserRouter>
 	</Provider>

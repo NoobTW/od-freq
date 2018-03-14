@@ -7,7 +7,8 @@ import { combineReducers } from 'redux';
 // 		month: k,
 // 		city: k,
 // 	},
-// 	datasets: k
+// 	datasets: k,
+//  boardData: k,
 // }
 
 const datasets = (state = {}, action) => {
@@ -75,7 +76,22 @@ const datasets = (state = {}, action) => {
 				datasets: action.payload.datasets,
 				loading: false,
 			}
-
+		case 'SHOW_BOARD_REQUEST':
+			return {
+				...state,
+				boardData: null,
+				loading: true,
+			}
+		case 'SHOW_BOARD_SUCCESS':
+			return {
+				...state,
+				boardData: action.payload.data,
+				loading: false,
+			}
+		case 'SHOW_BOARD_FAILED':
+			return {
+				failed: true,
+			}
 		default:
 			return state;
 	}

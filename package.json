@@ -12,6 +12,7 @@
     "csvtojson": "^1.1.9",
     "d3plus-react": "^0.2.26",
     "history": "^4.7.2",
+    "nodejieba": "^2.2.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

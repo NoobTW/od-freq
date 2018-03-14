@@ -48,11 +48,13 @@ export function showMonth(payload){
 						const categoriesArr = [];
 						Object.keys(categories).forEach((key) => {
 							if(key && key.trim() !== ''){
-								categoriesArr.push({
+								let k = {
 									name: key,
 									value: categories[key],
-									group: key.substring(0, 3),
-								});
+									group: key,
+								};
+								if(k.group.includes('政府') || k.group.includes('澎湖縣')) k.group = k.group.substr(0, 3);
+								categoriesArr.push(k);
 							}
 						});
 

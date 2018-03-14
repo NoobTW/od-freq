@@ -4,6 +4,33 @@ body{
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+.datasets ul{
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.datasets li{
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.list-link, .list-link:hover, .list-link:visited, .list-link:visited:hover {
+  text-decoration: none;
+  color: #2979FF;
+}
+
+.list-link svg{
+  font-size: 5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.list-link:hover, .list-link:visited:hover{
+  text-decoration: underline;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -48,6 +75,44 @@ h2{
 
 .datasets li{
   list-style: none;
+}
+
+.board{
+  border-collapse: collapse;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.board th{
+  background: #eff0f1;
+}
+
+.board td a, .board td a:hover, .board td a:visited, .board td a:visited:hover{
+  color: inherit;
+}
+
+.board td, .board {
+  border: 1px solid #777;
+}
+
+.board tr .rank{
+  background: #eff0f1;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.board tr .name{
+  font-size: 1.2rem;
+}
+
+.board tr .count{
+  text-align: right;
+  padding: 0 3px;
+}
+
+.board tr .gv{
+  font-size: .9rem;
+  color: #333;
 }
 
 footer{
